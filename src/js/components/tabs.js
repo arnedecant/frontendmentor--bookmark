@@ -1,28 +1,32 @@
 // -------------------------------------------------------------------
-// :: App
+// :: Tabs
 // -------------------------------------------------------------------
 
-export default class App {
+import Component from 'component.js'
 
-	constructor() {
+export default class Tabs extends Component {
 
-		this.init()
+	constructor(selector) {
+
+		super(selector)
 
 	}
 
 	init() {
 
-		
+		super()
 
 	}
 
 	click(e) {
 
-		
+		super()
 
 	}
 
 	render(timestamp) {
+
+        super()
 
 		// add self to the requestAnimationFrame
 
@@ -31,5 +35,3 @@ export default class App {
 	}
 
 }
-
-document.addEventListener("DOMContentLoaded", (e) => new App())

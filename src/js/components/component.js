@@ -1,12 +1,17 @@
 // -------------------------------------------------------------------
-// :: App
+// :: Component
 // -------------------------------------------------------------------
 
-export default class App {
+export default class Component {
 
-	constructor() {
+	constructor(selector) {
 
-		this.init()
+        this.selector = selector
+        this.element = document.querySelector(selector)
+        
+        this.element.addEventListener('click', this.click.bind(this))
+
+        this.init()
 
 	}
 
@@ -31,5 +36,3 @@ export default class App {
 	}
 
 }
-
-document.addEventListener("DOMContentLoaded", (e) => new App())

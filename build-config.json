@@ -1,0 +1,13 @@
+{
+	"production": true,
+	"targets": [
+		{
+			"id": "index",
+			"seo-title": "Bookmark",
+			"seo-description": "",
+			"src-html": "index.html",
+			"src-sass": "main.scss",
+			"src-js": "app.js"
+		}
+	]
+}

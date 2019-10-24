@@ -1,10 +1,12 @@
-html, body, ul, li, a, button, input {
-    all: unset;
-}
+@charset "utf-8";
 
 :root {
     --color-primary: hsl(231, 69%, 60%);
     --color-secondary: hsl(0, 94%, 66%);
     --color-tertiary: hsl(229, 31%, 21%);
     --color-neutral: hsl(229, 8%, 60%);
+}
+
+html, body, ul, li, a, button, input {
+    all: unset;
 }

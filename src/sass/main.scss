@@ -5,8 +5,31 @@
     --color-secondary: hsl(0, 94%, 66%);
     --color-tertiary: hsl(229, 31%, 21%);
     --color-neutral: hsl(229, 8%, 60%);
+    --color-light: #ffffff;
+    --color-dark: #222222;
 }
 
-html, body, ul, li, a, button, input, h1, h2, p, form, input {
+html, body, ul, li, a, button, input, h1, h2, h3, p, form, input {
     all: unset;
 }
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+@import 'utilities/_screenreader.scss';
+@import 'utilities/_typography.scss';
+
+@import 'components/_button.scss';
+@import 'components/_form.scss';
+@import 'components/_tabs.scss';
+@import 'components/_accordion.scss';
+
+@import 'sections/_header.scss';
+@import 'sections/_footer.scss';

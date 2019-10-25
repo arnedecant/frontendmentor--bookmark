@@ -18,6 +18,8 @@
 	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 	-->
 
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap">
+
 	<!--
 	Use 'preconnect' to keep DNS lookups and handshakes open
 	NOTE: limited support, to be used in combination with 'dns-prefetch'
@@ -122,11 +124,17 @@
 </head>
 <body>
 
+	<a href="#content" title="skip to content" class="sr-hidden">Skip to content</a>
+
 	@@include('sections/header.html')
-	@@include('sections/hero.html')
-	@@include('sections/features.html')
-	@@include('sections/cta.html')
-	@@include('sections/faq.html')
+
+	<main id="content">
+		@@include('sections/hero.html')
+		@@include('sections/features.html')
+		@@include('sections/cta.html')
+		@@include('sections/faq.html')
+	</main>
+
 	@@include('sections/footer.html')
 	
 	<!-- SVG ICONS /////////////////////////////////////////////////// -->

@@ -1,20 +1,20 @@
-import Accordion from "./components/accordion"
-import Tabs from "./components/tabs"
-import Form from "./components/form"
-
 // -------------------------------------------------------------------
 // :: App
 // -------------------------------------------------------------------
+
+import Accordion from "./components/accordion"
+import Tabs from "./components/tabs"
+import Form from "./components/form"
 
 export default class App {
 
 	constructor(e) {
 
-		this.init()
+		document.addEventListener("DOMContentLoaded", (e) => this.init.bind(this))
 
 	}
 
-	init() {
+	init(e) {
 
 		this.accordion = new Accordion('[data-component="accordion]')
 		this.tabs = new Tabs('[data-component="tabs]')
@@ -38,4 +38,4 @@ export default class App {
 
 }
 
-document.addEventListener("DOMContentLoaded", (e) => new App(e))
+new App()

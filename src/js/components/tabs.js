@@ -2,7 +2,7 @@
 // :: Tabs
 // -------------------------------------------------------------------
 
-import Component from 'component.js'
+import Component from './component'
 
 export default class Tabs extends Component {
 

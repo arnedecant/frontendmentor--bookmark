@@ -1,0 +1,35 @@
+.btn {
+    --color: var(--color-neutral);
+
+    display: inline-block;
+    cursor: pointer;
+
+    color: var(--color-light);
+    background-color: var(--color);
+    border: 1px solid var(--color);
+
+    line-height: 1;
+    border-radius: 4px;
+    padding: 12px 18px;
+    font-weight: 500;
+
+    transition: 200ms ease;
+    transition-property: color, background-color;
+}
+
+.btn:hover, .btn-primary:hover {
+    color: var(--color);
+    background-color: transparent;
+}
+
+.btn-primary {
+    --color: var(--color-primary);
+}
+
+.btn-secondary {
+    --color: var(--color-secondary)
+}
+
+.btn-tertiary {
+    --color: var(--color-tertiary);
+}

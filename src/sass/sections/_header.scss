@@ -2,3 +2,22 @@ body > header, body > header ul {
     display: flex;
     align-items: center;
 }
+
+body > header.container {
+    margin: 2.5rem var(--container-margin);
+}
+
+body > header nav {
+    margin-left: auto;
+}
+
+body > header li a {
+    margin: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.logo img {
+    height: 1.75rem;
+}

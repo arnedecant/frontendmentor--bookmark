@@ -7,9 +7,11 @@
     --color-neutral: hsl(229, 8%, 60%);
     --color-light: #ffffff;
     --color-dark: #222222;
+
+    --container-margin: 3rem;
 }
 
-html, body, ul, li, a, button, input, h1, h2, h3, p, form, input {
+html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg {
     all: unset;
 }
 
@@ -17,14 +19,23 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+main > section:not(.faq), footer { display: none }
+
 .container {
+    // margin: 0 auto;
+    // max-width: 1440px;
+    width: calc(100% - 2 * var(--container-margin));
+    margin: 0 var(--container-margin);
+}
+
+.container-small {
+    max-width: 50rem;
     margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
 }
 
 @import 'utilities/_screenreader.scss';
 @import 'utilities/_typography.scss';
+@import 'utilities/_media.scss';
 
 @import 'components/_button.scss';
 @import 'components/_form.scss';

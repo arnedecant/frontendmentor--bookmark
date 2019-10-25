@@ -1,10 +1,14 @@
+import Accordion from "./components/accordion"
+import Tabs from "./components/tabs"
+import Form from "./components/form"
+
 // -------------------------------------------------------------------
 // :: App
 // -------------------------------------------------------------------
 
 export default class App {
 
-	constructor() {
+	constructor(e) {
 
 		this.init()
 
@@ -12,7 +16,9 @@ export default class App {
 
 	init() {
 
-		
+		this.accordion = new Accordion('[data-component="accordion]')
+		this.tabs = new Tabs('[data-component="tabs]')
+		this.form = new Form('[data-component="form]')
 
 	}
 
@@ -32,4 +38,4 @@ export default class App {
 
 }
 
-document.addEventListener("DOMContentLoaded", (e) => new App())
+document.addEventListener("DOMContentLoaded", (e) => new App(e))

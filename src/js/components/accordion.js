@@ -14,23 +14,13 @@ export default class Accordion extends Component {
 
 	init() {
 
-		super()
+		
 
 	}
 
 	click(e) {
 
-		super()
-
-	}
-
-	render(timestamp) {
-
-        super()
-
-		// add self to the requestAnimationFrame
-
-		window.requestAnimationFrame(this.render.bind(this))
+		
 
 	}
 

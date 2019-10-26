@@ -1,0 +1,13 @@
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    max-width: 20rem;
+    border-radius: 1rem;
+    // background-color: cyan;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 1px 10px 10px 0px rgba(0, 0, 0, 0.1);
+}

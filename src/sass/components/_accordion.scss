@@ -1,23 +1,69 @@
 [data-component="accordion"] {
-    
+    --height-article: 5rem;
+    text-align: left;
+}
+
+[data-component="accordion"] h1,
+[data-component="accordion"] svg {
+    pointer-events: none;
 }
 
 [data-component="accordion"] h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
+    transition: color 200ms ease;
+}
+
+[data-component="accordion"] article {
+    border-top: 1px solid var(--color-lighter);
+    max-height: var(--height-article);
+    overflow: hidden;
+    transition: max-height 300ms ease;
+}
+
+[data-component="accordion"] article.active {
+    max-height: 20rem;
+}
+
+[data-component="accordion"] article:last-child {
+    border-bottom: 1px solid var(--color-lighter);
 }
 
 [data-component="accordion"] header {
     display: flex;
     justify-content: space-between;
+    height: var(--height-article);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-[data-component="accordion"] svg {
-    width: 1.5rem;
-    height: 1.5rem;
+[data-component="accordion"] header:hover h1 {
+    color: var(--color-secondary);
 }
 
 [data-component="accordion"] p {
     line-height: 2;
     font-size: 1.2rem;
+    margin: 1rem 0 2.6rem;
+    color: var(--color-light);
+    opacity: 0;
+    transition: opacity 400ms ease 300ms;
+}
+
+[data-component="accordion"] article.active p {
+    opacity: 1;
+}
+
+[data-component="accordion"] svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 200ms ease;
+    transition-property: stroke, transform;
+}
+
+[data-component="accordion"] article.active svg {
+    stroke: var(--color-secondary);
+    transform: scale(-1);
 }

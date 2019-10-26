@@ -6,19 +6,21 @@ import Accordion from "./components/accordion"
 import Tabs from "./components/tabs"
 import Form from "./components/form"
 
-export default class App {
+class App {
 
 	constructor(e) {
 
-		document.addEventListener("DOMContentLoaded", (e) => this.init.bind(this))
+		// document.addEventListener('DOMContentLoaded', (e) => this.init.bind(this))
+
+		this.init()
 
 	}
 
 	init(e) {
 
-		this.accordion = new Accordion('[data-component="accordion]')
-		this.tabs = new Tabs('[data-component="tabs]')
-		this.form = new Form('[data-component="form]')
+		this.accordion = new Accordion('[data-component="accordion"]')
+		this.tabs = new Tabs('[data-component="tabs"]')
+		this.form = new Form('[data-component="form"]')
 
 	}
 
@@ -38,4 +40,4 @@ export default class App {
 
 }
 
-new App()
+export default new App()

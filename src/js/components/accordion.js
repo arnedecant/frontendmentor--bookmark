@@ -10,6 +10,11 @@ export default class Accordion extends Component {
 
 		super(selector)
 
+		this.$articles = this.element.querySelectorAll('article')
+		this.$articles = [...this.$articles]
+
+		this.$active = undefined
+
 	}
 
 	init() {
@@ -20,7 +25,16 @@ export default class Accordion extends Component {
 
 	click(e) {
 
-		
+		if (e.target.nodeName !== 'HEADER') return
+
+		this.$articles.map((article) => article.classList.remove('active'))
+
+		if (e.target.parentNode == this.$active) {
+			this.$active = undefined
+		} else {
+			e.target.parentNode.classList.add('active')
+			this.$active = e.target.parentNode
+		}
 
 	}
 

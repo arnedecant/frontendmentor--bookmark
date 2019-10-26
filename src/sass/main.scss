@@ -5,8 +5,10 @@
     --color-secondary: hsl(0, 94%, 66%);
     --color-tertiary: hsl(229, 31%, 21%);
     --color-neutral: hsl(229, 8%, 60%);
-    --color-light: #ffffff;
+    --color-lighter: #dddddd;
+    --color-light: #888888;
     --color-dark: #222222;
+    --color-default: #ffffff;
 
     --container-margin: 3rem;
 }
@@ -15,11 +17,19 @@ html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg {
     all: unset;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
 }
 
-main > section:not(.faq), footer { display: none }
+main > section:not(.cta), footer { display: none }
 
 .container {
     // margin: 0 auto;
@@ -29,7 +39,7 @@ main > section:not(.faq), footer { display: none }
 }
 
 .container-small {
-    max-width: 50rem;
+    max-width: 45rem;
     margin: 0 auto;
 }
 
@@ -41,6 +51,8 @@ main > section:not(.faq), footer { display: none }
 @import 'components/_form.scss';
 @import 'components/_tabs.scss';
 @import 'components/_accordion.scss';
+@import 'components/_card.scss';
 
 @import 'sections/_header.scss';
 @import 'sections/_footer.scss';
+@import 'sections/_sections.scss';

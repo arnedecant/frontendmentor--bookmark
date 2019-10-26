@@ -1,0 +1,71 @@
+// MAIN - contact
+
+footer > .main {
+    background-color: var(--color-primary);
+    color: var(--color-default);
+    padding: 5rem;
+}
+
+footer > .main h2,
+footer > .main span,
+footer > .main form {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+footer > .main h2 {
+    color: var(--color-default);
+    font-size: 2rem;
+    margin: 3rem auto;
+    letter-spacing: 1px;
+    // font-weight: 400;
+}
+
+footer > .main span {
+    display: block;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+// SUB - logo, navigation and social links
+
+footer > .sub {
+    @extend header.main;
+
+    background-color: var(--color-tertiary);
+    color: var(--color-default);
+    padding: 2.4rem 0;
+}
+
+footer > .sub .container {
+    display: flex;
+}
+
+footer > .sub nav {
+    margin-left: 5rem;
+    display: flex;
+}
+
+ul.social {
+    margin-left: auto;
+}
+
+ul.social li {
+    display: flex;
+    justify-content: center;
+}
+
+ul.social svg {
+    fill: var(--color-default);
+}
+
+ul.social a:hover svg {
+    fill: var(--color-secondary);
+}
+
+// ATTRIBUTION
+
+.attribution {
+    display: none;
+}

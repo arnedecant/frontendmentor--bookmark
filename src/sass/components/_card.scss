@@ -1,13 +1,67 @@
 .cards {
+    --padding: 1.5rem;
+    --margin-top-step: 3rem;
+
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .card {
+    width: 100%;
     max-width: 20rem;
     border-radius: 1rem;
     // background-color: cyan;
     margin: 1rem;
+    padding: var(--padding);
     text-align: center;
     box-shadow: 1px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card:nth-child(1) {
+    margin-top: 0;
+}
+
+.card:nth-child(2) {
+    margin-top: var(--margin-top-step);
+}
+
+.card:nth-child(3) {
+    margin-top: calc(var(--margin-top-step) * 2);
+}
+
+.card figure {
+    margin: 1.5rem 0;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}
+
+.card h3 + span {
+    color: var(--color-neutral);
+    display: block;
+    margin: 1rem 0;
+}
+
+.card footer {
+    width: 100%;
+    position: relative;
+    padding-top: var(--padding);
+    margin-top: calc(var(--padding) * 2);
+}
+
+.card footer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -25%;
+    top: -5px;
+    width: 150%;
+
+    background-image: radial-gradient(circle closest-side, var(--color-lighter) calc(100% - 0.5px), transparent 100%);
+    background-repeat: repeat-x;
+    background-size: 20px 5px;
+    height: 5px;
 }

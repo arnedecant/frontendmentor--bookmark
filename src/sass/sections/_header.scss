@@ -1,21 +1,21 @@
-body > header, body > header ul {
+header.main, header.main ul {
     display: flex;
     align-items: center;
 }
 
-body > header.container {
+header.container {
     margin: 2.5rem var(--container-margin);
 }
 
-body > header nav {
+header.main nav {
     margin-left: auto;
 }
 
-body > header li a {
+header.main li a {
     margin: 0 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .logo img {

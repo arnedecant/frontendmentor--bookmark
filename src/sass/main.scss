@@ -15,21 +15,19 @@
 
 html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg {
     all: unset;
+    box-sizing: inherit;
 }
 
 html {
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-body {
-    font-family: 'Rubik', sans-serif;
-}
-
-main > section:not(.cta), footer { display: none }
+.hidden.hidden.hidden { display: none }
 
 .container {
     // margin: 0 auto;
@@ -47,8 +45,8 @@ main > section:not(.cta), footer { display: none }
 @import 'utilities/_typography.scss';
 @import 'utilities/_media.scss';
 
-@import 'components/_button.scss';
 @import 'components/_form.scss';
+@import 'components/_button.scss';
 @import 'components/_tabs.scss';
 @import 'components/_accordion.scss';
 @import 'components/_card.scss';

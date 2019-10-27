@@ -22,6 +22,7 @@ html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg, fieldset,
 html {
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {

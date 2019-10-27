@@ -1,5 +1,21 @@
 // GENERAL STUFF
 
+%abstract-pseudo {
+    content: '';
+    
+    position: absolute;
+    z-index: -1;
+    bottom: -2rem;
+    left: 13rem;
+
+    display: block;
+    width: 75rem;
+    height: 20rem;
+
+    border-radius: 10rem;
+    background-color: var(--color-primary);
+}
+
 main > section {
     margin: 8rem 2rem; // how to disable collapsing margins?
 }
@@ -48,6 +64,14 @@ section.hero .content {
     margin-top: -4rem;
 }
 
+section.hero figure {
+    position: relative;
+}
+
+section.hero figure:after {
+    @extend %abstract-pseudo;
+}
+
 section.hero figure > img {
     width: 115%;
 }
@@ -64,6 +88,13 @@ section.features article.active {
 
 section.features h1 {
     font-size: 1.8rem;
+}
+
+section.features figure:before {
+    @extend %abstract-pseudo;
+    left: auto;
+    right: 23rem;
+    bottom: -5rem;
 }
 
 // SECTION: FAQ

@@ -35,6 +35,10 @@ class App {
 		// TODO: Check OS color scheme and apply accordingly
 		// Perhaps use CSS: @media (prefers-color-scheme: dark) { ... }
 
+		// TODO: Show modal (new compoennt...) whenever a dummy link is clicked
+		// Model shows info about me, the project and also a link to the GitHub
+		// repository and perhaps maybe a blogpost about the codebase..?
+
 	}
 
 	click(e) {

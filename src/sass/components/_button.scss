@@ -16,6 +16,9 @@ a:hover {
     --color: var(--color-default);
 
     @extend %el;
+    padding: 1rem 1.75rem;
+    // letter-spacing: 1px;
+    font-weight: 500;
 
     transition-property: color, background-color;
 }

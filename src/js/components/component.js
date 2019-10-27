@@ -4,7 +4,7 @@
 
 export default class Component {
 
-	constructor(selector) {
+	constructor(selector, init) {
 
         this.selector = selector
 		this.element = document.querySelector(selector)
@@ -16,7 +16,7 @@ export default class Component {
         
         this.element.addEventListener('click', this.click.bind(this))
 
-        this.init()
+        if (init) this.init()
 
 	}
 

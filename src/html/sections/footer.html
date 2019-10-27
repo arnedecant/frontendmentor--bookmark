@@ -5,8 +5,11 @@
         <span>35,000+ already joined</span>
         <h2>Stay up-to-date with what we’re doing</h2>
 
-        <form data-component="form">
-            <input type="email" name="email">
+        <form novalidate data-component="form" data-validation-required="This is a required field" data-validation-invalid="This field is invalid">
+            <fieldset>
+                <label for="email" class="sr-hidden">Enter your email address</label>
+                <input type="email" required name="email" id="email" placeholder="Enter your email address" data-validation-invalid="Whoops, make sure it's an email">        
+            </fieldset>
             <button type="submit" class="btn btn-secondary">Contact Us</button>
         </form>
 

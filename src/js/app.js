@@ -40,7 +40,7 @@ class App {
 
 		// Disable dummy anchors
 
-		if (e.target.href.endsWith('#')) e.preventDefault()
+		if (e.target.href && e.target.href.endsWith('#')) e.preventDefault()
 
 	}
 

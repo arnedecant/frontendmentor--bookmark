@@ -106,9 +106,6 @@ export default class Tabs extends Component {
 		this.$buttons.map(this.activate.bind(this))
 		this.$articles.map(this.activate.bind(this))
 
-		console.log(this.$buttons)
-		console.log(this.$articles)
-
 	}
 
 	activate(el) {

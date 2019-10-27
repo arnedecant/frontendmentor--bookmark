@@ -19,6 +19,7 @@ class App {
 
 		// Init components
 
+		this.menu = new Accordion('[data-component="menu"]')
 		this.accordion = new Accordion('[data-component="accordion"]')
 		this.tabs = new Tabs('[data-component="tabs"]')
 		this.form = new Form('[data-component="form"]')

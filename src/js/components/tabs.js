@@ -62,6 +62,21 @@ export default class Tabs extends Component {
 		})
 
 		if (!this.tab) this.tab = this.$buttons[0].dataset.tab
+
+		// set height of content equal to the largest child
+
+		let height = this.$articles.reduce((height, $article) => {
+
+			const rect = $article.getBoundingClientRect()
+
+			if (height > rect.height) return height
+			else return rect.height
+
+		})
+
+		this.$content.style.setProperty('--height', height + 'px')
+
+		// set active tab & content
 		
 		this.setActive()
 

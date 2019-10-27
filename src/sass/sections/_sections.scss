@@ -1,7 +1,7 @@
 // GENERAL STUFF
 
 main > section {
-    margin: 10rem 2rem; // how to disable collapsing margins?
+    margin: 8rem 2rem; // how to disable collapsing margins?
 }
 
 article, section.hero {
@@ -37,11 +37,19 @@ section.hero p {
 
 section.hero {
     padding-top: 4rem;
-    padding-bottom: 4rem;
 }
 
 section.hero .btn {
     margin-right: 1rem;
+}
+
+section.hero .content {
+    padding-right: 4rem;
+    margin-top: -4rem;
+}
+
+section.hero figure > img {
+    width: 115%;
 }
 
 // SECTION: FEATURES

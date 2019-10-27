@@ -15,6 +15,7 @@
 }
 
 [data-component="accordion"] article {
+    display: block;
     border-top: 1px solid var(--color-lighter);
     max-height: var(--height-article);
     overflow: hidden;

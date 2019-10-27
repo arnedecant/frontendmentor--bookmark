@@ -10,10 +10,7 @@ class App {
 
 	constructor(e) {
 
-		// document.addEventListener('DOMContentLoaded', (e) => this.init.bind(this))
-
-		this.init()
-
+		window.addEventListener('load', this.init.bind(this))
 		document.addEventListener('click', this.click.bind())
 
 	}
@@ -33,6 +30,9 @@ class App {
 		// TODO: Paralax-like effect on the hero illustration
 		// Update the blue background and the illustration itself,
 		// according to mouse position, with a different multiplier
+
+		// TODO: Check OS color scheme and apply accordingly
+		// Perhaps use CSS: @media (prefers-color-scheme: dark) { ... }
 
 	}
 

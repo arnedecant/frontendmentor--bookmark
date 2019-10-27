@@ -5,6 +5,7 @@
     --color-secondary: hsl(0, 94%, 66%);
     --color-tertiary: hsl(229, 31%, 21%);
     --color-neutral: hsl(229, 8%, 60%);
+    --color-lightest: #efefef;
     --color-lighter: #dddddd;
     --color-light: #888888;
     --color-dark: #222222;
@@ -13,7 +14,7 @@
     --container-margin: 3rem;
 }
 
-html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg, fieldset {
+html, body, ul, li, a, button, input, h1, h2, h3, p, form, input, svg, fieldset, figure, img {
     all: unset;
     box-sizing: inherit;
 }
@@ -30,10 +31,10 @@ html {
 .hidden.hidden.hidden { display: none }
 
 .container {
-    // margin: 0 auto;
-    // max-width: 1440px;
+    margin: 0 auto;
+    max-width: 1280px;
     width: calc(100% - 2 * var(--container-margin));
-    margin: 0 var(--container-margin);
+    padding: 0 var(--container-margin);
 }
 
 .container-small {

@@ -1,3 +1,50 @@
 [data-component="tabs"] {
     
 }
+
+[data-component="tabs"] nav {
+    --nav-width: 45rem;
+    --indicator-width: calc(var(--nav-width) / 3);
+    --indicator-offset: 0;
+
+    max-width: var(--nav-width);
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 1px solid var(--color-lighter);
+    position: relative;
+}
+
+[data-component="tabs"] nav button {
+    display: block;
+    flex: 1;
+    color: var(--color-neutral);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+[data-component="tabs"] nav button.active {
+    color: var(--color-tertiary);
+}
+
+[data-component="tabs"] nav:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: -1px;
+    height: 4px;
+    border-radius: 2px;
+    width: var(--indicator-width);
+    background-color: var(--color-secondary);
+    transform: translateX(var(--indicator-offset));
+
+    transition: transform 300ms ease;
+}
+
+[data-tabs="content"] article {
+    display: none;
+} 
+
+[data-tabs="content"] article.active {
+    display: flex;
+}

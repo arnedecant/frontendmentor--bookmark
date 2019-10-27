@@ -1,6 +1,64 @@
+// GENERAL STUFF
+
 main > section {
     margin: 10rem 2rem; // how to disable collapsing margins?
 }
+
+article, section.hero {
+    display: flex;
+    align-items: center;
+}
+
+article figure,
+article .content,
+section.hero figure,
+section.hero .content {
+    width: 50%;
+}
+
+article figure + .content {
+    padding-left: 8rem;
+}
+
+article h1,
+section.hero h1 {
+    letter-spacing: 0.5px;
+}
+
+article p,
+section.hero p {
+    margin: 1.5rem 0;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--color-neutral);
+}
+
+// SECTION: HERO
+
+section.hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+section.hero .btn {
+    margin-right: 1rem;
+}
+
+// SECTION: FEATURES
+
+section.features article {
+    padding: 4rem 0;
+}
+
+section.features article.active {
+    display: flex;
+}
+
+section.features h1 {
+    font-size: 1.8rem;
+}
+
+// SECTION: FAQ
 
 section.faq {
     text-align: center;

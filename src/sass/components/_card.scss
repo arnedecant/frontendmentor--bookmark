@@ -33,6 +33,15 @@
 
 .card figure {
     margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1rem;
 }
 
 .card h3 {

@@ -17,7 +17,7 @@
 }
 
 main > section {
-    margin: 8rem 2rem; // how to disable collapsing margins?
+    padding: 6rem 2rem;
 }
 
 article, section.hero {
@@ -90,10 +90,14 @@ section.features h1 {
     font-size: 1.8rem;
 }
 
+section.features figure {
+    position: relative;
+}
+
 section.features figure:before {
     @extend %abstract-pseudo;
     left: auto;
-    right: 23rem;
+    right: 15%;
     bottom: -5rem;
 }
 

@@ -62,7 +62,7 @@
 [data-tabs="content"] article figure:before,
 [data-tabs="content"] article .content {
     opacity: 0;
-    transition: transform 600ms ease, opacity 300ms ease;
+    transition: transform 600ms ease 100ms, opacity 600ms ease 100ms;
 }
 
 [data-tabs="content"] article.active img,
@@ -74,12 +74,13 @@
 
 [data-tabs="content"] article img {
     transform: translate(0, -25%);
+    transition-delay: 200ms;
 }
 
 [data-tabs="content"] article .content {
     transform: translate(25%, 0);
 }
 
-[data-tabs="content"] article.active figure:before {
-    // transform: translate(10rem, 0);
+[data-tabs="content"] article figure:before {
+    transform: translate(-25rem, 0);
 }

@@ -27,3 +27,20 @@ header.main li a {
 .logo img {
     height: 1.75rem;
 }
+
+
+// ----------------------------
+// :: ANIMATIONS
+// ----------------------------
+
+header.main {
+    transition: 800ms ease;
+    transition-property: opacity, transform;
+    opacity: 0;
+    transform: translate(0, -50%);
+
+    &.animate-in {
+        opacity: 1;
+        transform: none;
+    }
+}

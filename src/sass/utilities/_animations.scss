@@ -1,0 +1,23 @@
+section.hero {
+
+    .content, 
+    figure img, 
+    figure:after {
+        transition: 500ms ease;
+        transition-property: opacity, transform;
+
+        opacity: 0;
+        transform: none;
+    }
+
+    &.animate-in {
+
+        .content, 
+        figure img, 
+        figure:after {
+            opacity: 1;
+        }
+
+    }
+
+}

@@ -1,8 +1,11 @@
 // MAIN - contact
 
-footer > .main {
+footer.main {
     background-color: var(--color-primary);
     color: var(--color-default);
+}
+
+footer > .main {
     padding: 5rem;
 }
 
@@ -68,4 +71,18 @@ ul.social a:hover svg {
 
 .attribution {
     display: none;
+}
+
+
+// ----------------------------
+// :: ANIMATIONS
+// ----------------------------
+
+footer > .sub {
+    transform: translate(0, 50%)
+}
+
+footer.animate-in > .sub {
+    opacity: 1;
+    transform: none;
 }

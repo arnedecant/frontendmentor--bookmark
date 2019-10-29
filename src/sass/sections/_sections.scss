@@ -110,3 +110,80 @@ section.faq {
 section.faq .btn {
     margin-top: 4rem;
 }
+
+
+// ----------------------------
+// :: ANIMATIONS
+// ----------------------------
+
+section.hero {
+
+    .content, 
+    figure img, 
+    figure:after {
+        transition: 800ms ease;
+        transition-property: opacity, transform;
+        opacity: 0;
+    }
+
+    .content {
+        transform: translate(-50%, 0);
+        transition-delay: 400ms;
+    }
+
+    figure img {
+        transform: translate(0, -50%);
+        transition-delay: 400ms;
+    }
+
+    figure:after {
+        transform: translate(50%, 0);
+    }
+
+    &.animate-in {
+
+        .content, 
+        figure img, 
+        figure:after {
+            opacity: 1;
+            transform: none;
+        }
+
+    }
+
+}
+
+section.features, section.faq {
+    transition: opacity 800ms ease 400ms;
+    opacity: 0;
+
+    &.animate-in {
+        opacity: 1;
+    }
+}
+
+section.cta {
+
+    .card {
+        transition: 800ms ease;
+        transition-property: opacity, transform;
+        opacity: 0;
+        transform: translate(0, -25%);
+    }
+
+    .card:nth-child(even) {
+        transform: translate(0, 25%);
+    }
+
+    @for $i from 1 through 3 {
+        .card:nth-child(#{$i}) {
+            transition-delay: 400ms + (200ms * $i)
+        }
+    }
+
+    &.animate-in .card {
+        opacity: 1;
+        transform: none;
+    }
+
+}

@@ -10,16 +10,30 @@ export default class Accordion extends Component {
 
 		super(selector)
 
-		this.$articles = this.element.querySelectorAll('article')
-		this.$articles = [...this.$articles]
+		this.$articles = [...this.element.querySelectorAll('article')]
+		this.$questions = [...this.element.querySelectorAll('[data-accordion="question"]')]
+		this.$answers = [...this.element.querySelectorAll('[data-accordion="answer"]')]
 
 		this.$active = undefined
+
+		this.init()
 
 	}
 
 	init() {
 
-		
+		// TODO: Set --height property for the answer ...
+
+		// this.$articles.map(($article, index) => {
+
+		// 	const $temp = $article.cloneNode(true)
+		// 	$temp.classList.add('active')
+
+		// 	const $answer = $temp.querySelector('[data-accordion="answer"]')
+		// 	const rect = $answer.getBoundingClientRect()
+		// 	console.log($answer, rect)
+
+		// })
 
 	}
 

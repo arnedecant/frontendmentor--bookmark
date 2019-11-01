@@ -4,6 +4,10 @@ a, button {
     transition: color 200ms ease;
 }
 
+a:focus {
+	outline: thin dotted;
+}
+
 a svg {
     transition: fill 200ms  ease;
 }

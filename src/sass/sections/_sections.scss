@@ -116,28 +116,41 @@ section.faq .btn {
 // :: ANIMATIONS
 // ----------------------------
 
+%animate-in--init {
+    transition: 800ms ease;
+    transition-property: opacity, transform;
+    opacity: 0;
+}
+
+%animate-in--done {
+    opacity: 1;
+    transform: none;
+}
+
+@mixin animate-in--delay($i) {
+    transition-delay: 800ms + (200ms * $i)
+}
+
 section.hero {
 
     .content, 
     figure img, 
     figure:after {
-        transition: 800ms ease;
-        transition-property: opacity, transform;
-        opacity: 0;
+        @extend %animate-in--init;
     }
 
     .content {
-        transform: translate(-50%, 0);
+        transform: translate(-25%, 0);
         transition-delay: 400ms;
     }
 
     figure img {
-        transform: translate(0, -50%);
+        transform: translate(0, -25%);
         transition-delay: 400ms;
     }
 
     figure:after {
-        transform: translate(50%, 0);
+        transform: translate(25%, 0);
     }
 
     &.animate-in {
@@ -145,8 +158,7 @@ section.hero {
         .content, 
         figure img, 
         figure:after {
-            opacity: 1;
-            transform: none;
+            @extend %animate-in--done;
         }
 
     }
@@ -154,12 +166,37 @@ section.hero {
 }
 
 section.features, section.faq {
-    transition: opacity 800ms ease 400ms;
-    opacity: 0;
+    @extend %animate-in--init;
+    transition-delay: 800ms;
 
     &.animate-in {
-        opacity: 1;
+        @extend %animate-in--done;
     }
+}
+
+section.faq {
+
+    [data-component="accordion"] article {
+        @extend %animate-in--init;
+        transition-property: opacity, transform, max-height;
+        transform: translate(-25%, 0);
+    }
+
+    [data-component="accordion"] article:nth-child(even) {
+        transform: translate(25%, 0);
+    }
+
+    @for $i from 1 through 8 {
+        [data-component="accordion"] article:nth-child(#{$i}) {
+            transition-delay: 800ms + (200ms * $i);
+        }
+    }
+
+    &.animate-in [data-component="accordion"] article,
+    &.animate-in [data-component="accordion"] article:nth-child(even) {
+        @extend %animate-in--done;
+    }
+
 }
 
 section.cta {
@@ -177,13 +214,13 @@ section.cta {
 
     @for $i from 1 through 3 {
         .card:nth-child(#{$i}) {
-            transition-delay: 400ms + (200ms * $i)
+            transition-delay: 800ms + (200ms * $i);
         }
     }
 
-    &.animate-in .card {
-        opacity: 1;
-        transform: none;
+    &.animate-in .card,
+    &.animate-in .card:nth-child(even) {
+        @extend %animate-in--done;
     }
 
 }

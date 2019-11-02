@@ -73,14 +73,14 @@
 }
 
 [data-tabs="content"] article img {
-    transform: translate(0, -25%);
+    transform: translate(0, -15%);
     transition-delay: 200ms;
 }
 
 [data-tabs="content"] article .content {
-    transform: translate(25%, 0);
+    transform: translate(15%, 0);
 }
 
 [data-tabs="content"] article figure:before {
-    transform: translate(-25rem, 0);
+    transform: translate(-15rem, 0);
 }

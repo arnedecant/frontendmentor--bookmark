@@ -1,0 +1,58 @@
+button.hamburger {
+    --bar-height: 0.25rem;
+    --bar-offset: 0.75rem;
+    --height: calc(var(--bar-height) + var(--bar-offset) * 2);
+
+    width: 2rem;
+    height: var(--height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.hamburger:before,
+button.hamburger:after,
+button.hamburger > span {
+    content: '';
+    pointer-events: none;
+    font-size: 0;
+    display: block;
+    height: var(--bar-height);
+    width: 100%;
+    background-color: var(--color-tertiary);
+    border-radius: 0.25rem;
+
+    transform: translate(0) rotate(0);
+    opacity: 1;
+
+    transition: 300ms ease;
+    transition-property: opacity, transform;
+}
+
+button.hamburger:before,
+button.hamburger:after {
+    position: absolute;
+    left: 0;
+}
+
+button.hamburger:before {
+    transform: translate(0, calc(-1 * var(--bar-offset))) rotate(0);
+}
+
+button.hamburger:after {
+    transform: translate(0, var(--bar-offset)) rotate(0);
+}
+
+button.hamburger.active:before {
+    transform: translate(0) rotate(45deg);
+}
+
+button.hamburger.active:after {
+    transform: translate(0) rotate(-45deg);
+}
+
+button.hamburger.active > span {
+    transform: translate(-100%, 0) rotate(0);
+    opacity: 0;
+}

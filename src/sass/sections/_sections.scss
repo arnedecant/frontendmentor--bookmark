@@ -140,12 +140,12 @@ section.hero {
     }
 
     .content {
-        transform: translate(-25%, 0);
+        transform: translate(-15%, 0);
         transition-delay: 400ms;
     }
 
     figure img {
-        transform: translate(0, -25%);
+        transform: translate(0, -15%);
         transition-delay: 400ms;
     }
 
@@ -179,11 +179,11 @@ section.faq {
     [data-component="accordion"] article {
         @extend %animate-in--init;
         transition-property: opacity, transform, max-height;
-        transform: translate(-25%, 0);
+        transform: translate(-15%, 0);
     }
 
     [data-component="accordion"] article:nth-child(even) {
-        transform: translate(25%, 0);
+        transform: translate(15%, 0);
     }
 
     @for $i from 1 through 8 {
@@ -205,11 +205,11 @@ section.cta {
         transition: 800ms ease;
         transition-property: opacity, transform;
         opacity: 0;
-        transform: translate(0, -25%);
+        transform: translate(0, -15%);
     }
 
     .card:nth-child(even) {
-        transform: translate(0, 25%);
+        transform: translate(0, 15%);
     }
 
     @for $i from 1 through 3 {

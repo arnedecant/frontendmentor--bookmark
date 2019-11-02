@@ -1,19 +1,24 @@
 a, button {
     pointer-events: all;
     cursor: pointer;
-    transition: color 200ms ease;
-}
-
-a:focus {
-	outline: thin dotted;
+    transition: 200ms ease;
+    transition-property: color, outline;
 }
 
 a svg {
-    transition: fill 200ms  ease;
+    transition: fill 200ms ease;
 }
 
 a:hover {
     color: var(--color-secondary);
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:focus:hover, a:focus:active {
+    outline: none
 }
 
 .btn {
@@ -24,8 +29,9 @@ a:hover {
     padding: 1rem 1.75rem;
     // letter-spacing: 1px;
     font-weight: 500;
+    transform: none;
 
-    transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color, transform, outline;
 }
 
 .btn-small {  
@@ -40,6 +46,15 @@ a:hover {
     color: var(--color-default);
     background-color: var(--color-tertiary);
     border-color: var(--color-tertiary);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:active:focus,
+.btn:hover:focus {
+    outline: 0;
 }
 
 .btn-primary {

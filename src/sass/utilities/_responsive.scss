@@ -1,0 +1,74 @@
+// -------------------------------------------------------------------
+// :: MEDIA QUERIES
+// -------------------------------------------------------------------
+// 1) Using 'gulp-combine-media-queries' to combine and export
+// media queries into a separate file (main.responsive.css)
+// So use media queries wherever you need them (inline)
+
+// $size-mobile: 		35rem;	// 560px
+// $size-tablet: 		46rem;	// 736px
+// $size-desktop: 		58rem;	// 928px
+// $size-desktop-xl: 	80rem;	// 1280px
+
+// @mixin FLOW-at($_min-width) {
+// 	@media screen and (min-width: $_min-width) {
+
+// 		@content;
+
+// 		// Show feedback on the current breakpoint if
+// 		// $debug-mode is set true (shown in px and em)
+// 		// NOTE: only applied to the html-element
+
+// 		@if $debug-mode and inspect(nth(&, 1)) == "html" {
+// 			&:before {
+
+// 				$_val: strip-unit($_min-width);
+// 				$_px: $_val * 16;
+// 				$_col: $_val * 3.25;
+
+// 				content: 'BREAKPOINT - #{$_min-width} - #{$_px}px';
+// 				background: rgba($_col, 0, 255-$_col, 0.7);
+// 				font-family: sans-serif;
+// 				font-size: 10px;
+// 				line-height: 1;
+// 				padding: 0.5em;
+// 				color: #FFF;
+
+// 				transform: translateX(-50%);
+// 				position: fixed;
+// 				z-index: 999999;
+// 				left: 50%;
+// 				top: 0;
+
+// 			}
+// 		}
+// 	}
+// }
+
+@mixin breakpoint($size) {
+	
+	@if $size == xs {
+	  @media (max-width: 767px) { @content; }
+	}
+   
+	@else if $size == s {
+	  @media (min-width: 768px) { @content; }
+	}
+   
+	@else if $size == m {
+	  @media (min-width: 992px) { @content; }
+	}
+   
+	@else if $size == l {
+	  @media (min-width: 1200px) { @content; }
+	}
+
+	@else if $size == xl {
+		@media (min-width: 1600px) { @content; }
+	  }
+   
+	@else {
+	  @warn "Breakpoint mixin supports: xs, s, m, l, xl";
+	}
+
+}
